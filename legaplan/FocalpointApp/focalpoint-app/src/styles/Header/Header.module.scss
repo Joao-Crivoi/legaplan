@@ -7,17 +7,6 @@
   padding-bottom: 24px;
   border-bottom: 1px solid #D7DDE9;
   opacity: 1;
-
-  @media (max-width: 850px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    height: auto;
-  }
-  @media (max-width: 480px) {
-    align-items: flex-start;
-  }
-
   h1{
     font-weight: 500;
     font-size: 24px;
@@ -31,6 +20,19 @@
   }
   h1, .date{
     letter-spacing: -0.02em;
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    height: auto;
+  }
+  @media (max-width: 480px) {
+    align-items: flex-start;
+    h1{
+      font-size: 16px;
+    }
   }
 }
 
