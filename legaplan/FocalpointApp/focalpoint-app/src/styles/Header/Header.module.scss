@@ -1,3 +1,5 @@
+@import '../varibles';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -9,12 +11,12 @@
   opacity: 1;
   h1{
     font-weight: 500;
-    font-size: 24px;
+    font-size: $font-size-large;
     line-height: 29.04px;
   }
   .date{
     font-weight: 400;
-    font-size: 16px;
+    font-size: $font-size-small;
     color: #0000008A;
     line-height: 19.36px;
   }
@@ -25,13 +27,14 @@
   @media (max-width: 850px) {
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: $gap-small;
     height: auto;
   }
   @media (max-width: 480px) {
     align-items: flex-start;
+    width: $width-sm; 
     h1{
-      font-size: 16px;
+      font-size: $font-size-small;
     }
   }
 }
@@ -41,6 +44,5 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-
 }
 
