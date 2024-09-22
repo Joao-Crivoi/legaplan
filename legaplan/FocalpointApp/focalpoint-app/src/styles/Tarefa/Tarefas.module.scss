@@ -1,0 +1,119 @@
+@import '../varibles';
+
+
+.containerDasTarefas {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-medium;
+  width: $container-width;
+  margin: 0 auto;
+  padding: $padding-large;
+  border: 1px solid $light-border-color;
+  border-radius: $container-border-radius;
+  box-shadow: $container-box-shadow;
+  background-color: $light-background-color;
+  font-size: $font-size-small;
+
+  @media (max-width: 480px) {
+    width: $width-sm;
+  }
+
+  .listaTarefas,
+  .listaFinalizadas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: $font-size-small;
+    color: $text-color-grey;
+    line-height: 19.36px;
+    letter-spacing: -0.02em;
+  }
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $gap-large;
+  text-align: center;
+  padding-bottom: 100px;
+  
+}
+
+.inputText {
+  input[type='text'] {
+    padding: $input-padding;
+    border: 1px solid $light-border-color;
+    border-radius: $input-border-radius;
+  }
+}
+
+.adicionarTarefa {
+  background: linear-gradient(90deg, $btn-add-primary-color 0%, $btn-add-secondary-color 68.65%);
+  width: $container-width;
+  height: $button-default-height;
+  padding: 16px 24px;
+  border-radius: $button-border-radius;
+  font-size: $font-size-small;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    width: $width-sm;
+  }
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  border: 1.5px dashed $dashed-border-color;
+  padding: 16px;
+  border-radius: $input-border-radius;
+ 
+  > :nth-child(3) {
+    margin-left: auto; 
+  }
+
+  &:hover {
+    background: $hover-background-color;
+    cursor: pointer;
+    border: 1.5px solid $dashed-border-color;
+  }
+
+  .riscado {
+    position: relative;
+    color: $text-color-grey;
+    text-decoration: none;
+  }
+
+  .riscado::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background-color: $text-color-grey;
+    transform: translateY(-50%);
+  }
+  .nomeTarefa, .riscado { 
+    margin: 0px 16px 0px 12px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+
+  Image {
+    flex-shrink: 0; 
+  }
+}

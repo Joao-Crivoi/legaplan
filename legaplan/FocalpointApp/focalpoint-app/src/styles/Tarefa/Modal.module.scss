@@ -1,0 +1,128 @@
+@import '../varibles';
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $modal-backdrop-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: $light-background-color;
+  padding: $padding-large;
+  width: $container-width;
+  border-radius: $container-border-radius;
+  box-shadow: $modal-box-shadow;
+
+  @media (max-width: 500px) {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    max-width: none;
+  }
+
+  
+  input[type='text'] {
+    width: 100%;
+    height: $input-height;
+    padding: 16px;
+    gap: $gap-small;
+    border-radius: $input-border-radius;
+    border: 1px solid $dashed-border-color;
+    opacity: 1;
+
+    @media (max-width: 500px) {
+      width: $width-sm;
+    }
+  }
+
+  .modalActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+      gap: $gap-small;
+    }
+  }
+
+  span {
+    text-align: left;
+    color: $font-color-muted;
+  }
+}
+
+.modalTitles {
+  width: $container-width;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h3 {
+    font-size: $font-size-large;
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 29.04px;
+  }
+
+
+  h4 {
+    font-size: $font-size-small;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  h3,h3{
+    letter-spacing: -0.02em;
+  }
+
+
+  @media (max-width: 500px) {
+    width: $width-sm;
+  }
+}
+
+.cancelButton,
+.addButton,
+.deleteButton {
+  width: $button-modal-width;
+  height: $button-default-height;
+  padding: 16px 24px;
+  border-radius: $button-border-radius;
+  font-size: $font-size-small;
+  cursor: pointer;
+  border: none;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 500px) {
+    width: $width-sm;
+  }
+}
+
+.cancelButton {
+  background: #e7eefb;
+  font-weight: 400;
+}
+
+.addButton {
+  background: linear-gradient(90deg, $btn-add-primary-color 0%, $btn-add-secondary-color 68.65%);
+  color: white;
+}
+
+.deleteButton {
+  background: linear-gradient(90deg, $btn-del-primary-color 0%, $btn-del-secondary-color 68.65%);
+  color: white;
+}

@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 24px 56px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #D7DDE9;
+  opacity: 1;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    height: auto;
+  }
+  @media (max-width: 480px) {
+    align-items: flex-start;
+  }
+
+  h1{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29.04px;
+  }
+  .date{
+    font-weight: 400;
+    font-size: 16px;
+    color: #0000008A;
+    line-height: 19.36px;
+  }
+  h1, .date{
+    letter-spacing: -0.02em;
+  }
+}
+
+.logo {
+  font-size: 6.625rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
