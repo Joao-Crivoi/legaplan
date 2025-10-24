@@ -19,7 +19,6 @@ This project allows users to add, complete, and delete tasks in a clean and resp
 ## 🧠 Tech Stack
 
 - **Next.js 14** – React framework for building fast and scalable web apps  
-- **React Hooks** – To handle component logic and state  
 - **SCSS Modules** – For modular and elegant styling  
 
 ---
